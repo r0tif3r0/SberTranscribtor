@@ -1,0 +1,141 @@
+@use '../assets/variables';
+
+@font-face {
+  font-family: 'SBSansText';
+  src: url('../assets/fonts/SBSansText.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SBSansText';
+  src: url('../assets/fonts/SBSansTextMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SBSansText';
+  src: url('../assets/fonts/SBSansTextBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'SBSansText', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Modern Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+// Списки с ролью list
+[role='list'] {
+  & ul,
+  & ol {
+    list-style: none;
+  }
+}
+
+// Базовые ссылки
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+// Изображения
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+// Формы и элементы управления
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  
+  // Сброс для мобильных устройств
+  &:focus {
+    outline: none;
+  }
+}
+
+// Анимации и motion
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Дополнительные сбросы для форм
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0; // Добавляем явный сброс padding
+}
+
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  
+  // Сброс для автозаполнения
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 100px white inset;
+  }
+}
+
+// Наследование шрифтов
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+* {
+  text-decoration: none;
+  color: black;
+  &:active, &:hover {
+    text-decoration: none;
+  }
+}

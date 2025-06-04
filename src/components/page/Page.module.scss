@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    height: 100%;
+
+    .workspace {
+        display: flex;
+        width: calc(100vw - 260px);
+        height: 100%;
+        padding: 20px 32px 10px 32px;
+        color: var(--additional60);
+        font-size: 20px;
+    }
+}

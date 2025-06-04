@@ -1,0 +1,37 @@
+.sidebar__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    .sidebar__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+        color: var(--additional60);
+        fill: var(--additional60);
+        font-size: 16px;
+        border-radius: 8px;
+
+        &:hover {
+            fill: var(--focusColor);
+            color: var(--focusColor);
+            background-color: var(--successTransparent8);
+        }
+        &:active {
+            scale: (0.95);
+        }
+
+        &.active {
+            fill: var(--success); 
+            color: var(--focusColor);
+            font-weight: 500;
+            background-color: var(--successTransparent24); 
+        }
+
+        .sidebar__label {
+            color: inherit;
+        }
+    }
+}

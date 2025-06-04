@@ -1,0 +1,66 @@
+.header {
+    width: 100%;
+    height: 72px;
+    border-bottom: 1px solid var(--additional24);
+
+    .header__container {
+        display: flex;
+        align-items: center;
+        height: 72px;
+        padding: 0 2rem 0 2rem;
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+    
+            .header__logo_image {
+                height: 28px;
+                width: 28px;
+                margin-right: 10px;
+                fill: var(--brand);
+            }
+
+            .header__logo_text {
+                white-space: nowrap;
+                color: var(--brand);
+                font-size: 28px;
+                font-weight: 700;
+            }
+        }
+
+        .header__actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: flex-end;
+            width: 100%;
+            .services{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                height: 48px;
+                padding: 0 15px;
+                border-radius: 10px;
+                background-color: var(--backgroundOne);
+                
+                .audio, .documents, .help {
+                    height: 24px;
+
+                    .audio_icon, .document_icon, .help_icon {
+                        width: 24px;
+                        height: 24px;
+                        fill: var(--additional60);
+
+                        &:hover {
+                            fill: var(--brand);
+                        }
+                        &:active {
+                            transform: scale(0.95);
+                            opacity: 0.9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
